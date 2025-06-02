@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/step_count_gradient"
+    android:padding="24dp">
+
+    <ImageView
+        android:id="@+id/backButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_back"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="4dp"
+        android:contentDescription="Back"
+        android:clickable="true"
+        android:focusable="true" />
+
+
+    <!-- Date -->
+    <TextView
+        android:id="@+id/tvDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#593E3E"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="48dp" />
+
+    <FrameLayout
+        android:id="@+id/stepCircleContainer"
+        android:layout_width="286dp"
+        android:layout_height="286dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="96dp">
+
+        <com.google.android.material.progressindicator.CircularProgressIndicator
+            android:id="@+id/stepProgress"
+            android:layout_width="240dp"
+            android:layout_height="240dp"
+            app:indicatorColor="#62EF68"
+            app:indicatorSize="280dp"
+            app:trackColor="#33FFFFFF"
+            app:trackThickness="28dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvSteps"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:textColor="#950B3B"
+                android:textSize="48sp"
+                android:textStyle="bold" />
+
+<!--            <TextView-->
+<!--                android:id="@+id/tvStepsLabel"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Steps"-->
+<!--                android:textColor="#292727"-->
+<!--                android:textSize="24sp"-->
+<!--                android:textStyle="bold" />-->
+            <TextView
+                android:id="@+id/tvStepGoalLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Step Goal"
+                android:textColor="#292727"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+    </FrameLayout>
+
+
+    <!-- Bottom stats -->
+<!--    <TextView-->
+<!--        android:id="@+id/tvStepIconEmoji"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_below="@id/stepCircleContainer"-->
+<!--        android:layout_marginTop="24dp"-->
+<!--        android:text="🚶👣🚶‍♀"-->
+<!--        android:textSize="64sp"-->
+<!--        android:layout_marginBottom="10dp"-->
+<!--        android:layout_centerHorizontal="true"-->
+<!--        />-->
+
+    <LinearLayout
+        android:id="@+id/bottomStats"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="165dp"
+        android:background="#C9FFF8FB"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingTop="24dp"
+        android:paddingBottom="24dp"
+        android:weightSum="2"
+        tools:ignore="NotSibling">
+
+        <!-- Calories -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="8dp">
+
+            <TextView
+                android:id="@+id/tvCalories"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#614F17"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="🔥 Calories"
+                android:textColor="#614F17"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <!-- Distance -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="8dp">
+
+            <TextView
+                android:id="@+id/tvDistance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#03A9F4"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="🚶 Distance"
+                android:textColor="#03A9F4"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+<!--        &lt;!&ndash; Time &ndash;&gt;-->
+<!--        <LinearLayout-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_weight="1"-->
+<!--            android:gravity="center"-->
+<!--            android:orientation="vertical"-->
+<!--            android:padding="8dp">-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/tvTime"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:textColor="#4CAF50"-->
+<!--                android:textSize="24sp"-->
+<!--                android:textStyle="bold" />-->
+
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="🕣 Time"-->
+<!--                android:textColor="#4CAF50"-->
+<!--                android:textSize="14sp" />-->
+<!--        </LinearLayout>-->
+    </LinearLayout>
+</RelativeLayout>

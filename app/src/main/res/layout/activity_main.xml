@@ -6,107 +6,51 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:gravity="center_horizontal"
     android:padding="16dp"
+    android:background="@drawable/home"
     tools:context=".MainActivity">
 
+    <!-- Heading -->
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/headingText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Step Counter"
-        android:layout_gravity="center"
-        android:layout_marginTop="10dp"
-        android:textSize="50sp"
-        android:textStyle="bold"
-        android:textColor="@color/black" />
+        android:fontFamily="@font/poppins"
+        android:gravity="center"
+        android:text="StepSync"
+        android:layout_marginTop="100dp"
+        android:textColor="@color/white"
+        android:textSize="36sp"
+        android:textStyle="bold" />
+
+    <!-- Paragraph -->
     <TextView
-        android:id="@+id/stepCounterTargetTextView"
-        android:layout_width="wrap_content"
+        android:id="@+id/paragraphText"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:text="Step Goal:5000"
-        android:layout_gravity="center"
-        android:layout_marginTop="10dp"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        android:textColor="@color/black" />
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="32dp"
+        android:fontFamily="@font/poppins"
+        android:gravity="center"
+        android:text="Get insights into your daily movement and receive gentle reminders to stay active. StepSync is your personal companion for a healthier you."
+        android:textColor="#575151"
+        android:textSize="18sp" />
 
-        <ProgressBar
-            android:id="@+id/progressBar"
-            android:layout_width="130dp"
-            android:layout_height="187dp"
-            style="?android:attr/progressBarStyleHorizontal"
-            android:layout_gravity="center"
-            android:layout_marginTop="16dp"
-            android:background="@drawable/circular"
-            android:padding="16dp"
-            android:progressDrawable="@drawable/custom_progressbar">
-
-        </ProgressBar>
-    <LinearLayout
+    <!-- Next Button -->
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/nextButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
-        <ImageView android:layout_width="79dp"
-            android:layout_height="79dp"
-            android:src="@drawable/man"/>
-        <TextView
-            android:id="@+id/stepCountView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Steps:0"
-            android:layout_gravity="center"
-            android:padding="20dp"
-            android:textSize="24sp"
-            android:textColor="@color/black"/>
-
-
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-        <ImageView android:layout_width="79dp"
-            android:layout_height="79dp"
-            android:src="@drawable/distance"/>
-        <TextView
-            android:id="@+id/distanceView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Ditance:0"
-            android:layout_gravity="center"
-            android:padding="20dp"
-            android:textSize="24sp"
-            android:textColor="@color/black"/>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-        <ImageView android:layout_width="79dp"
-            android:layout_height="79dp"
-            android:src="@drawable/timer"/>
-        <TextView
-            android:id="@+id/timeView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Time:0"
-            android:layout_gravity="center"
-            android:padding="20dp"
-            android:textSize="24sp"
-            android:textColor="@color/black"/>
-
-    ,</LinearLayout>
-    <Button
-        android:id="@+id/pauseBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:padding="20dp"
-        android:text="Pause"
-        android:onClick="onPauseButtonClicked"/>
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/button_background"
+        android:fontFamily="@font/poppins"
+        android:padding="16dp"
+        android:text="Next"
+        android:textAllCaps="false"
+        android:textColor="@android:color/black"
+        android:textSize="18sp" />
 
 </LinearLayout>

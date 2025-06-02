@@ -2,4 +2,16 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="card_background">#f0f0f0</color>
+    <color name="card_text">#333333</color>
+    <color name="purple_200">#E4B7C6</color>
+    <color name="purple_500">#E3B5C4</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="primary">#FF6079</color>
+    <color name="backgroundLight">#FFFFFF</color>
+    <color name="textPrimary">#000000</color>
+    <color name="textSecondary">#666666</color>
+
 </resources>

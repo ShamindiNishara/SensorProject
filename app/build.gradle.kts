@@ -40,4 +40,10 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
+    implementation("org.tensorflow:tensorflow-lite:2.13.0")
+    implementation("org.tensorflow:tensorflow-lite-select-tf-ops:2.13.0")
+    implementation("com.google.android.gms:play-services-location:21.0.1")
+    implementation("androidx.core:core:1.12.0")
+    implementation("com.github.PhilJay:MPAndroidChart:3.1.0")
+
 }
